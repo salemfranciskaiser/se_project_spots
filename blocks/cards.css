@@ -1,27 +1,30 @@
 .cards {
-  padding-top: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 40px;
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
 
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
   gap: 20px 17px;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
+  /* 1 column for mobile */
+  grid-template-columns: 1fr;
 }
 
-@media screen and (max-width: 880px) {
+/* For tablet and up */
+@media screen and (min-width: 768px) {
   .cards__list {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
-    gap: 20px 17px;
-    padding: 0 19px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 580px) {
+/* For desktop */
+@media screen and (min-width: 1280px) {
   .cards__list {
-    grid-template-columns: 1fr; /* 1 column for mobile */
-    gap: 20px;
-    padding: 0 19px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
