@@ -1,9 +1,9 @@
 .card {
-  width: 100%;  /* Change from max-width to width */
+  width: 100%; /* Change from max-width to width */
   border-radius: 10px;
   background-color: #fcf5e5;
   overflow: hidden;
-  }
+}
 
 .card__title {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
