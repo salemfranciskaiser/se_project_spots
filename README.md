@@ -39,7 +39,6 @@ Users can:
 
  [View the live project here](https://salemfranciskaiser.github.io/se_project_spots/)
 
-
 ---
 
 ## Figma File
