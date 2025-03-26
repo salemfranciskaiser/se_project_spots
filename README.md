@@ -33,8 +33,6 @@ Users can:
 ### Mobile Layout
 ![Mobile layout screenshot](./images/mobile-layout.png)
 
-> You can export these screenshots from the [Figma file](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1), or take screenshots of your actual page.
-
 ---
 
 ## GitHub Pages Deployment
