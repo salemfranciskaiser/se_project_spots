@@ -60,7 +60,6 @@
   cursor: pointer;
 }
 
-
 .profile__add-btn {
   margin-top: auto;
   background-color: #212121;
@@ -96,7 +95,7 @@
     margin-left: 0;
     align-items: center;
     width: 100%;
-   }
+  }
   .profile__name {
     font-size: 20px;
     margin-bottom: 6px;
