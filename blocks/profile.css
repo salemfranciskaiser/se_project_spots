@@ -1,6 +1,5 @@
 .profile {
   display: flex;
-  max-width: 1280px;
   margin: 0 auto;
   padding: 34px 0 20px;
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
@@ -8,6 +7,9 @@
 
 .profile__avatar {
   border-radius: 7px;
+  height: 190px;
+  width: 190px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -17,18 +19,25 @@
 }
 
 .profile__name {
+  color: #212121;
   margin: 0 0 12px;
   font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .profile__description {
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(33, 33, 33, 0.7);
+  max-width: 97px;
   margin: 0;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -37,27 +46,20 @@
   margin-top: auto;
   width: 127px;
   background-color: #fcf5e5;
-  color: #212121;
+  color: #757575;
   border: none;
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .profile__edit-btn:hover {
-  background-color: #969696;
-  color: white;
+  color: #212121;
   cursor: pointer;
 }
 
-.profile__edit-btn:hover img {
-  filter: brightness(0) invert(1);
-  opacity: 1;
-  cursor: pointer;
-}
 
 .profile__add-btn {
   margin-top: auto;
@@ -65,16 +67,17 @@
   color: #fcf5e5;
   border: none;
   border-radius: 8px;
-  width: 149px;
-  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1;
+  padding: 18px 32px;
 }
 
 .profile__add-btn:hover {
-  background-color: #969696;
+  background-color: rgba(33, 33, 33, 0.8)
   cursor: pointer;
 }
 
@@ -82,14 +85,22 @@
   .profile {
     flex-direction: column;
     align-items: center;
-    padding: 34px 0 20px;
+    padding: 20px 16px 20px;
   }
   .profile__avatar {
     width: 127px;
     height: 127px;
-    margin-bottom: 26px;
+    margin-bottom: 16px;
   }
+  .profile__column {
+    margin-left: 0;
+    align-items: center;
+    width: 100%;
+   }
   .profile__name {
+    font-size: 20px;
+    margin-bottom: 6px;
+    max-width: 288px;
     text-align: center;
   }
   .profile__description {
