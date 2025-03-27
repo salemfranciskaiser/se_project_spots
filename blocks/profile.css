@@ -65,6 +65,7 @@
 }
 
 .profile__add-btn {
+  margin-left: auto;
   margin-top: auto;
   background-color: #212121;
   color: #fcf5e5;
