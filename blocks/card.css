@@ -9,7 +9,7 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1;
   color: #212121;
   white-space: nowrap;
   overflow: hidden;
@@ -30,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 20px 0;
+  padding: 12px 0 20px 0;
 }
 
 .card__like-btn {
@@ -49,6 +49,7 @@
 
 @media screen and (min-width: 1280px) {
   .card__title {
+    line-height: 1.2;
     font-size: 20px;
   }
 }
