@@ -35,7 +35,6 @@ newPostCloseBtn.addEventListener("click", function () {
   newPostModal.classList.remove("modal_is-opened");
 });
 
-
 function handleEditProfileFormSubmit(event) {
   event.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
@@ -43,16 +42,18 @@ function handleEditProfileFormSubmit(event) {
   editProfileModal.classList.remove("modal_is-opened");
 }
 
+editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
+
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
   // Log form values to console
-  console.log('Name:', nameInput.value);
-  console.log('Link:', linkInput.value);
+  console.log("Name:", nameInput.value);
+  console.log("Link:", linkInput.value);
 
   // Close the modal
   newPostModal.classList.remove("modal_is-opened");
 }
 
 // Add the event listener
-addCardFormElement.addEventListener('submit', handleAddCardSubmit);
+addCardFormElement.addEventListener("submit", handleAddCardSubmit);
