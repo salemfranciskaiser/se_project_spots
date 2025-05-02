@@ -51,6 +51,11 @@ const linkInput = newPostModal.querySelector("#card-image-input");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 const cardTemplate = document.querySelector("#card-template").content;
+const previewModal = document.querySelector("#preview-modal");
+const previewImage = previewModal.querySelector(".modal__image");
+const previewCaption = previewModal.querySelector(".modal__caption");
+const previewCloseBtn = previewModal.querySelector(".modal__close-btn");
+
 
 function getCardElement(data) {
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
@@ -62,6 +67,15 @@ function getCardElement(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
+
+  cardImageEl.addEventListener("click", () => {
+    previewImage.src = data.link;
+    previewImage.alt = data.name;
+    previewCaption.textContent = data.name;
+    openModal(previewModal);
+  });
+
+
 
   cardLikeBtn.addEventListener("click", () => {
     cardLikeBtn.classList.toggle("card__like-btn_active");
@@ -96,6 +110,10 @@ newPostBtn.addEventListener("click", function () {
 });
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
+});
+
+previewCloseBtn.addEventListener("click", function () {
+  closeModal(previewModal);
 });
 
 function handleEditProfileFormSubmit(event) {
