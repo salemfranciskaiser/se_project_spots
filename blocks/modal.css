@@ -155,8 +155,7 @@
   font-weight: 500;
   font-family: poppins, sans-serif;
   line-height: 1;
-  display: block;  /* Add this */
-  margin-top: 32px;  /* Add this */
+  display: block;
 }
 
 .modal__submit-btn_disabled {

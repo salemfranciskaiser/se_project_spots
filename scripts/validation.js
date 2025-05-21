@@ -43,6 +43,11 @@ const toggleButtonState = (inputList, buttonElement, config) => {
   }
 };
 
+const disableButton = (buttonElement, config) => {
+  buttonElement.classList.add(config.inactiveButtonClass);
+  buttonElement.disabled = true;
+};
+
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
@@ -55,6 +60,17 @@ const setEventListeners = (formEl, config) => {
       toggleButtonState(inputList, buttonElement, config);
     });
   });
+};
+
+const resetFormValidation = (formElement, config) => {
+  const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
+  const buttonElement = formElement.querySelector(config.submitButtonSelector);
+
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, config);
+  });
+
+  toggleButtonState(inputList, buttonElement, config);
 };
 
 const enableValidation = (config) => {
