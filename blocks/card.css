@@ -19,7 +19,6 @@
   padding: 0;
 }
 
-
 .card__content {
   display: flex;
   align-items: center;
@@ -47,10 +46,9 @@
 }
 
 .card__delete-btn:hover {
-  background-image: url(../images/delete_icon_hover.svg);  /* Change to the lighter pink heart image */
-  opacity: 1;  /* Keep full opacity */
+  background-image: url(../images/delete_icon_hover.svg); /* Change to the lighter pink heart image */
+  opacity: 1; /* Keep full opacity */
 }
-
 
 .card__like-btn {
   background-image: url(../images/heart_icon.svg);
@@ -68,16 +66,14 @@
 }
 
 .card__like-btn_active:hover {
-  background-image: url(../images/like_button_hover.svg);  /* Change to the lighter pink heart image */
-  opacity: 1;  /* Keep full opacity */
+  background-image: url(../images/like_button_hover.svg); /* Change to the lighter pink heart image */
+  opacity: 1; /* Keep full opacity */
 }
 
 .card__like-btn:hover {
   opacity: 1;
   cursor: pointer;
 }
-
-
 
 @media screen and (min-width: 1280px) {
   .card__title {

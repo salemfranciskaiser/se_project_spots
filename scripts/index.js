@@ -91,11 +91,32 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener('keydown', handleEscClose);
+  modal.addEventListener('mousedown', handleModalClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener('keydown', handleEscClose);  // Add this line
+  modal.removeEventListener('mousedown', handleModalClick);
 }
+
+function handleModalClick(evt) {
+  // If we clicked on the modal overlay (background)
+  if (evt.target.classList.contains('modal')) {
+    // Close the modal
+    closeModal(evt.target);
+  }
+}
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+   const openedModal = document.querySelector('.modal_is-opened');
+   if (openedModal) {
+     closeModal(openedModal);
+   }
+  }
+  }
 
 editProfileBtn.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
@@ -127,18 +148,18 @@ editProfileForm.addEventListener("submit", handleEditProfileFormSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-
   const newCard = {
     name: nameInput.value,
     link: linkInput.value,
   };
-
   const cardElement = getCardElement(newCard);
-
   cardsListEl.prepend(cardElement);
 
-  nameInput.value = "";
-  linkInput.value = "";
+  // Reset form and button state
+  addCardFormElement.reset();
+  const submitButton = addCardFormElement.querySelector('.modal__submit-btn');
+  submitButton.classList.add('modal__submit-btn_disabled');
+  submitButton.disabled = true;
 
   closeModal(newPostModal);
 }
