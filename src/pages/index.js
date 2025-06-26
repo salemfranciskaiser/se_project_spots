@@ -1,3 +1,21 @@
+import "../pages/index.css";
+import {
+  enableValidation,
+  resetFormValidation,
+  disableButton,
+  config,
+} from "../scripts/validation.js";
+
+import logo from "../images/logo.svg";
+import avatar from "../images/avatar.jpg";
+import pencilIcon from "../images/pencil.svg";
+import plusIcon from "../images/plus.svg";
+
+document.querySelector(".header__logo").src = logo;
+document.querySelector(".profile__avatar").src = avatar;
+document.querySelector(".profile__edit-btn img").src = pencilIcon;
+document.querySelector(".profile__add-btn img").src = plusIcon;
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -34,13 +52,14 @@ const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const editProfileForm = document.forms["edit-profile-form"];
 const editProfileNameInput = editProfileForm.elements["profile-name-input"];
-const editProfileDescriptionInput = editProfileForm.elements["profile-description-input"];
+const editProfileDescriptionInput =
+  editProfileForm.elements["profile-description-input"];
 
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
-const addCardFormElement = document.forms["new-post-form"];
+const addCardFormElement = document.forms["new-post-form"]; // I changed this line to use the correct form name. I can see the cards
 const nameInput = newPostModal.querySelector("#card-caption-input");
 const linkInput = newPostModal.querySelector("#card-image-input");
 
@@ -104,7 +123,6 @@ modals.forEach((modal) => {
   });
 });
 
-
 function handleEscClose(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_is-opened");
@@ -146,7 +164,7 @@ function handleAddCardSubmit(evt) {
 
   // Reset form and button state
   addCardFormElement.reset();
-  disableButton(evt.submitter, config);  // Replace the two lines with this one
+  disableButton(evt.submitter, config); // Replace the two lines with this one
 
   closeModal(newPostModal);
 }
@@ -157,3 +175,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsListEl.append(cardElement);
 });
+
+enableValidation(config);
