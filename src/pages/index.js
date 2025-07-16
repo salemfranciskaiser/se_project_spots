@@ -223,3 +223,5 @@ api
     document.querySelector(".profile__avatar").src = user.avatar;
   })
   .catch(console.error);
+ // TEST COMMENT FOR SUBMISSION
+ 
