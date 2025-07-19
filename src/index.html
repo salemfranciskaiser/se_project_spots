@@ -59,9 +59,13 @@
                 <img src="#" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button type="button" class="card__like-btn"></button>
-                </div></li
-            ></template>
+                  <div class="card__like-container">
+                    <button type="button" class="card__like-btn"></button>
+                    <span class="card__like-count">0</span>
+                  </div>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -149,24 +153,25 @@
       </div>
     </div>
     <div class="modal" id="avatar-modal">
-        <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
-          <h2 class="modal__title">Edit avatar</h2>
-          <form class="modal__form" id="edit-avatar-form" novalidate>
-            <label for="profile-avatar-input" class="modal__label">
-              Avatar
-              <input
-                id="profile-avatar-input"
-                name="avatar"
-                class="modal__input"
-                placeholder="avatar goes here"
-                required
-              />
-              <span id="profile-avatar-input-error" class="modal__error"></span>
-            </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
-          </form>
-        </div>
+      <div class="modal__container">
+        <button type="button" class="modal__close-btn"></button>
+        <h2 class="modal__title">Edit avatar</h2>
+        <form class="modal__form" id="edit-avatar-form" novalidate>
+          <label for="profile-avatar-input" class="modal__label">
+            Avatar
+            <input
+              id="profile-avatar-input"
+              name="avatar"
+              type="url"
+              class="modal__input"
+              placeholder="avatar goes here"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error"></span>
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
       </div>
+    </div>
   </body>
 </html>
