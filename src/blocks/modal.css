@@ -201,7 +201,7 @@
 }
 
 .modal__submit-btn.modal__submit-btn_type_danger:active {
-  background-color: #ff6565; /* Slightly darker on hover */
+  background-color: #ff6565;
 }
 
 
