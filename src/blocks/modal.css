@@ -168,6 +168,43 @@
   cursor: pointer;
 }
 
+.modal__button-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.modal__cancel-btn {
+  background-color: transparent;
+  color: #212121;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #212121;
+  padding: 18px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  width: 156px;
+}
+
+.modal__submit-btn.modal__submit-btn_type_danger {
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal__submit-btn.modal__submit-btn_type_danger:active {
+  background-color: #ff6565; /* Slightly darker on hover */
+}
+
+
 @media screen and (max-width: 580px) {
   .modal__image-container {
     max-width: 90vw; /* Allow image to take up more width on mobile */
