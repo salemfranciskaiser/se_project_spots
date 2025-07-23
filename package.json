@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/salemfranciskaiser/se_project_spots/issues"
   },
-  "homepage": "https://github.com/salemfranciskaiser/se_project_spots#readme",
+  "homepage": "https://salemfranciskaiser.github.io/se_project_spots",
   "devDependencies": {
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
