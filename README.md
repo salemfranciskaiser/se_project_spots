@@ -31,6 +31,12 @@ Users can:
 
 ---
 
+## Project Spots Deployed
+
+[Visit my deployed Project!](https://salemfranciskaiser.github.io/se_project_spots/)
+
+---
+
 ## Project Demo Video
 
 [Watch my walkthrough video](https://youtu.be/vylsIF_VnfU)
