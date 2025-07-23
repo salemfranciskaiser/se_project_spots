@@ -25,16 +25,6 @@ Users can:
 
 ---
 
-## Screenshots
-
-### Desktop Layout
-![Desktop layout screenshot](./images/desktop-layout.png)
-
-### Mobile Layout
-![Mobile layout screenshot](./images/mobile-layout.png)
-
----
-
 ## Figma File
 
 [Design file on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
