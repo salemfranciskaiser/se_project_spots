@@ -77,6 +77,12 @@
   cursor: pointer;
 }
 
+.card__like-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 @media screen and (min-width: 1280px) {
   .card__title {
     line-height: 1.2;
