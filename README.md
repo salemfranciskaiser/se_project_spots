@@ -35,12 +35,6 @@ Users can:
 
 ---
 
-## GitHub Pages Deployment
-
- [View the live project here](https://salemfranciskaiser.github.io/se_project_spots/)
-
----
-
 ## Figma File
 
 [Design file on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
@@ -49,7 +43,7 @@ Users can:
 
 ## Project Demo Video
 
-[Watch my walkthrough video](https://youtu.be/Jm_8jrXhHB0)
+[Watch my walkthrough video](https://youtu.be/vylsIF_VnfU)
 
 ---
 
